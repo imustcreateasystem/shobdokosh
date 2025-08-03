@@ -1,9 +1,16 @@
 @config "../../../tailwind.config.ts";
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+/* Change color of selected texts. */
+::selection {
+  background: #3a83a0;
+  color: white;
 }
 
 /* Enable smooth-scrolling. */
@@ -15,4 +22,43 @@ html {
 button,
 [role="button"] {
   cursor: pointer;
+}
+
+/* Autofill for inputs. */
+input:is(
+    :-webkit-autofill,
+    :-webkit-autofill:hover,
+    :-webkit-autofill:focus,
+    :autofill,
+    :autofill:hover,
+    :autofill:focus
+  ) {
+  background-color: #fff1f2 !important;
+  -webkit-box-shadow: 0 0 0 30px #fff1f2 inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  border-color: #ffe1e3 !important;
+}
+
+.dark
+  input:is(
+    :-webkit-autofill,
+    :-webkit-autofill:hover,
+    :-webkit-autofill:focus,
+    :autofill,
+    :autofill:hover,
+    :autofill:focus
+  ) {
+  background-color: #48070c !important;
+  -webkit-box-shadow: 0 0 0 30px #48070c inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  border-color: #841821 !important;
+}
+
+/* Input styling. */
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  margin-left: 6px;
 }

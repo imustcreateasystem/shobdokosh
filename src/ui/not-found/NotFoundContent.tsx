@@ -24,7 +24,7 @@ function NotFoundTitle() {
       className={cn(
         "mb-8",
         "text-5xl font-bold leading-5 tracking-tight",
-        "text-zinc-700 dark:text-zinc-200"
+        "text-slate-700 dark:text-slate-200"
       )}
     >
       {HEADER_TITLE}
@@ -38,7 +38,7 @@ function NotFoundDescription() {
       className={cn(
         "mb-[4em]",
         "text-lg leading-7",
-        "text-zinc-600 dark:text-zinc-300"
+        "text-slate-600 dark:text-slate-300"
       )}
     >
       {DESCRIPTION}
