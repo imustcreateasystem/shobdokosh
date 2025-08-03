@@ -1,0 +1,18 @@
+@config "../../../tailwind.config.ts";
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* Enable smooth-scrolling. */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Give all buttons and button-like objects the appropriate cursor. */
+button,
+[role="button"] {
+  cursor: pointer;
+}
